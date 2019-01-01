@@ -2,7 +2,7 @@
   <div class="hello">
    <div class="holder">
      <form @submit.prevent="addSkill">
-     <input type="tex" placeholder="Enter a skill you have" v-model="skill" v-validate="'min:5'" name="skill">
+     <input type="tex" placeholder="Enter a skill you have" v-model="skill" v-validate="'min:3'" name="skill">
 
      <transition name="alert-in" enter-active-class="animated flipInX" leave-active-class="animated flipOutX">
      <p class="alert" v-if="errors.has('skill')"> {{errors.first('skill') }} </p>
@@ -17,7 +17,7 @@
 
         </transition-group>
        </ul>
-      <p>These are the skills that you possess.</p>
+      <p>These are the skills that I possess.</p>
      </div>
   </div>
 </template>
